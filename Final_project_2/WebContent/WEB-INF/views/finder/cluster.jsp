@@ -28,31 +28,28 @@
         minLevel: 2 // 클러스터 할 최소 지도 레벨 
     });
  
-    // 데이터를 가져오기 위해 jQuery를 사용합니다
+   
     // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
   
-    $.get("../data/hongdaefinal_0902.json", function(data) {
-        // 데이터에서 좌표 값을 가지고 마커를 표시합니다
-        // 마커 클러스터러로 관리할 마커 객체는 생성할 때 지도 객체를 설정하지 않습니다
-      	test(data);
-      	//var t = Object.keys($(data.positions.title)).length;
-      	//console.log(t);
-		//console.log(111);
-		function test(data){
-	    	//json타이틀 길이로 반복해서 마커 찍어준다
-		    for(k = 0 ; k < Object.keys($(data.positions.title)).length ; k++){ 
-			    var markers = $(data.positions).map(function(i,position) {
-		    	//console.log('=='+position.x[k]); //테스트확인용
-		        return new kakao.maps.Marker({
-		        	position : new kakao.maps.LatLng(position.x[k], position.y[k]),
-		        	title : $(data.positions.title)[k]
-		        });	
-		    });
-		    // 클러스터러에 마커들을 추가합니다 
-		    clusterer.addMarkers(markers);
-		    }
-	    }
+	var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+    
+
+    for(var i=0; i<positions.title.length; i++){
+    // 마커 이미지의 이미지 크기 입니다
+    var imageSize = new kakao.maps.Size(24, 35); 
+    
+    // 마커 이미지를 생성합니다    
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
+    
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+        map: map, // 마커를 표시할 지도
+        position: new kakao.maps.LatLng(positions.x[i],positions.y[i]), // 마커를 표시할 위치
+        title : positions.title[i], // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+        image : markerImage // 마커 이미지 
     });
+}
+ 
 
     
 </script>
