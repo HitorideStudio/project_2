@@ -31,7 +31,7 @@
 
 <servlet-mapping>
 	<servlet-name>Final_project_2</servlet-name>
-	<url-pattern>*.go</url-pattern>
+	<url-pattern>*.do</url-pattern>
 </servlet-mapping>
 
 

@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/finder/")
 public class GoBean {
 	
-	@RequestMapping("main.go")
+	@RequestMapping("main.do")
 	public String main() {
 		return "/finder/main";
 	}
-	@RequestMapping("map.go")
+	@RequestMapping("map.do")
 	public String map() {
 		return "/finder/map";
 	}
-	@RequestMapping("cluster.go")
+	@RequestMapping("cluster.do")
 	public String cluster() {
 		return "/finder/cluster";
 	}
