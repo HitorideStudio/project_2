@@ -16,6 +16,8 @@
 
 	<context:component-scan base-package="project_2.bean"/>
 	
+	<!-- in db bean con -->
+	<bean id="rindb" class="rindb.bean.Rindb"/>
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
          <property name="prefix" value="/WEB-INF/views/"/>
