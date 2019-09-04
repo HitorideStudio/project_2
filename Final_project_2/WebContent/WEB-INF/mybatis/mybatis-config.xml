@@ -5,8 +5,10 @@
 <configuration>
 	<typeAliases>
 		<typeAlias alias="vo" type="project.list.vo.PlaceList"/>
+		<typeAlias alias="tv" type="project.list.vo.TestVO"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="/sql/rindb.xml"/>
+		<mapper resource="/sql/testSQL.xml"/>
 	</mappers>
 </configuration>

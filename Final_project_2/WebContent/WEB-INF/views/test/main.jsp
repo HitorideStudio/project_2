@@ -2,7 +2,7 @@
     pageEncoding="EUC-KR"%>
 
 
-<img src="/frame/imgs/${vo.img}" width="250"/><br/>
+<img src="/Final_project_2/imgs/${vo.img}" width="250"/><br/>
 <b>${sessionScope.memId }</b><br/>
 ${vo.name}/${vo.age}
 

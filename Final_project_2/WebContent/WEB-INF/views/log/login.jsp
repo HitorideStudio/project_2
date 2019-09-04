@@ -26,6 +26,8 @@
         Kakao.API.request({
          url: '/v1/user/me',
          success: function(res) {
+          alert(res.properties.nickname+'환영합니다');
+          location.href="loginPro_k.do?name="+res.properties.nickname;   
           console.log(res);
           
           var userID = res.id;      //유저의 카카오톡 고유 id
@@ -48,8 +50,14 @@
       	}
 
      });
+    
   //]]>
 </script>
+<form action = "login.do" method = "post">
+  <input type = "hidden" value = "userID">
+  </form>
+  ${vo.userID }
+
 
 </body>
 </html>

@@ -3,5 +3,5 @@
 
 <script >
 	alert("가입완료");
-	window.location="/frame/test/main.do";
+	window.location="../test/main.do";
 </script>
