@@ -21,8 +21,8 @@ public class LoginBean {
 	
 	@RequestMapping("log.do")
 	public String Log(HttpSession session) throws Throwable {
-		   String clientId = "DL_WReenE209x17agSSX";//애플리케이션 클라이언트 아이디값";
-		    String redirectURI = URLEncoder.encode("http://localhost:8080", "UTF-8");
+		   String clientId = "La0RtXyOJUt4BaBYv2rD";//애플리케이션 클라이언트 아이디값";
+		    String redirectURI = URLEncoder.encode("http://localhost:8080/Final_project_2/ex/callback.do", "UTF-8");
 		    SecureRandom random = new SecureRandom();
 		    String state = new BigInteger(130, random).toString();
 		    String apiURL = "https://nid.naver.com/oauth2.0/authorize?response_type=code";
@@ -36,8 +36,8 @@ public class LoginBean {
 	
 	@RequestMapping("callback.do")
 	public String Callback(HttpServletRequest request) throws Throwable {
-	    String clientId = "DL_WReenE209x17agSSX";//애플리케이션 클라이언트 아이디값";
-	    String clientSecret = "1EmTt7xOnH";//애플리케이션 클라이언트 시크릿값";
+	    String clientId = "La0RtXyOJUt4BaBYv2rD";//애플리케이션 클라이언트 아이디값";
+	    String clientSecret = "jJKnkNO4Yr";//애플리케이션 클라이언트 시크릿값";
 	    String code = request.getParameter("code");
 	    String state = request.getParameter("state");
 	    String redirectURI = URLEncoder.encode("http://localhost:8080", "UTF-8");
