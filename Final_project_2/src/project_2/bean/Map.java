@@ -11,22 +11,21 @@ import org.springframework.web.servlet.ModelAndView;
 import project.list.vo.PlaceList;
 
 @Controller
-@RequestMapping("/finder/")
-public class GoBean {
+@RequestMapping("/map/")
+public class Map {
 	
 	//my batis db
-	@Autowired
-	private SqlSessionTemplate sql = null;
+		@Autowired
+		private SqlSessionTemplate sql = null;
 	
-	@RequestMapping("main.do")
-	public String main() {
-		return "/finder/main";
-	}
-<<<<<<< HEAD
+	//테스트용맵 do
 	@RequestMapping("map.do")
 	public String map() {
 		return "/finder/map";
 	}
+	
+	
+	//클러스터적용 do
 	@RequestMapping("cluster.do")
 	public ModelAndView cluster() {
 		ModelAndView model = new ModelAndView();
@@ -38,8 +37,4 @@ public class GoBean {
 		return model;
 		
 	}
-=======
->>>>>>> branch 'master' of https://github.com/HitorideStudio/project_2.git
-
-
 }
