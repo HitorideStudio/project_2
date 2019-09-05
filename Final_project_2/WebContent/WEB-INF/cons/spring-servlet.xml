@@ -19,7 +19,6 @@
 	<!-- in db bean con -->
 	<bean id="rindb" class="rindb.bean.Rindb"/>
 	
-	<bean id="map" class="project_2.map"/>
 	
 	<!--  -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
