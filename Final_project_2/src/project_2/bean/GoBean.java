@@ -24,10 +24,17 @@ public class GoBean {
 	}
 	
 	@RequestMapping("welcome.do")
-	public String welcome() {
+	public ModelAndView welcome() {
+		ModelAndView model = new ModelAndView();
 		
-		return "welcome";
+		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
+		
+		model.addObject("list",list);
+		model.setViewName("welcome");
+		
+		return model;
 	}
-
+	
+	
 
 }

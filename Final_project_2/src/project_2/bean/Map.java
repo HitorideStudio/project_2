@@ -20,9 +20,16 @@ public class Map {
 	
 	//테스트용맵 do
 	@RequestMapping("map.do")
-	public String map() {
-		return "/finder/map";
+	public ModelAndView map() {
+		ModelAndView model = new ModelAndView();
+		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
+		
+		model.addObject("list",list);
+		model.setViewName("/finder/map");
+		
+		return model;
 	}
+	
 	
 	
 	//클러스터적용 do
@@ -30,9 +37,7 @@ public class Map {
 	public ModelAndView cluster() {
 		ModelAndView model = new ModelAndView();
 		
-		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
-		model.addObject("list",list);
-		
+	
 		model.setViewName("/finder/cluster");
 		return model;
 		
