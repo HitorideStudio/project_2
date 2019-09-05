@@ -22,6 +22,24 @@ public class GoBean {
 	public String main() {
 		return "/finder/main";
 	}
+<<<<<<< HEAD
+	@RequestMapping("map.do")
+	public String map() {
+		return "/finder/map";
+	}
+	@RequestMapping("cluster.do")
+	public ModelAndView cluster() {
+		ModelAndView model = new ModelAndView();
+		
+		List<PlaceList> list = sql.selectList("placelistdb.selectplacelist");
+		model.addObject("list",list);
+		
+		model.setViewName("/finder/cluster");
+		return model;
+		
+	}
+=======
+>>>>>>> branch 'master' of https://github.com/HitorideStudio/project_2.git
 
 
 }
