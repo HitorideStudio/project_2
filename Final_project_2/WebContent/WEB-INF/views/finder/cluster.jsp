@@ -28,30 +28,6 @@
         minLevel: 2 // 클러스터 할 최소 지도 레벨 
     });
  
-   
-    // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
-  
-	var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
-    
-
-    for(var i=0; i<positions.title.length; i++){
-    // 마커 이미지의 이미지 크기 입니다
-    var imageSize = new kakao.maps.Size(24, 35); 
-    
-    // 마커 이미지를 생성합니다    
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-    
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-        map: map, // 마커를 표시할 지도
-        position: new kakao.maps.LatLng(positions.x[i],positions.y[i]), // 마커를 표시할 위치
-        title : positions.title[i], // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        image : markerImage // 마커 이미지 
-    });
-}
-
-
-
     var list = new Array();
     var lon = new Array();
     var lat = new Array();
@@ -62,9 +38,11 @@
     list.push("${list.lon}"); //list[i+1]
     list.push("${list.lat}"); //list[i+2]
     </c:forEach>
-
-
-/*     // 마커 이미지의 이미지 주소입니다
+    // 데이터를 가져와 마커를 생성하고 클러스터러 객체에 넘겨줍니다
+  
+	
+    
+    // 마커 이미지의 이미지 주소입니다
     var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
        
         for(var i=0; i<list.length; i+=3){ // 3씩증가
@@ -81,7 +59,11 @@
             title : list[i], // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
             image : markerImage // 마커 이미지 
         });
- */
+
+}
+
+
+
     
 </script>
 </body>
