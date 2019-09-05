@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>가입완료</title>
 </head>
 <body>
-테스트페이지
+<script >
+	alert("가입완료");
+	window.location="../finder/main.do";
+</script>
 </body>
 </html>
