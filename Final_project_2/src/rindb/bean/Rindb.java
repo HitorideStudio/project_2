@@ -45,7 +45,7 @@ public class Rindb {
 			vo.setLon(s[3][i]);
 			vo.setLat(s[4][i]);
 			vo.setPlace(s[5][i]);
-			sql.insert("rindblist.rindbinsert",vo);
+			sql.insert("placelistdb.rindbinsert",vo);
 			}
 	
 		rc.close();
@@ -53,20 +53,6 @@ public class Rindb {
 		return "/rindb/insert";
 	}
 	
-	/* 마커찍는곳에적용해야됨
-	 * @RequestMapping("maker.do") public ModelAndView maker() { ModelAndView model
-	 * = new ModelAndView();
-	 * 
-	 * 
-	 * List<PlaceList> list = sql.selectList("rindblist.select");
-	 * 
-	 * model.addObject("list",list);
-	 * 
-	 * model.setViewName("/day/maker"); return model;
-	 * 
-	 * }
-	 */
-	
-	
+
 	
 }
