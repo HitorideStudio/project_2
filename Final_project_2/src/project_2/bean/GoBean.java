@@ -37,7 +37,7 @@ public class GoBean {
 		return model;
 		
 	}
-	a
+	
 
 
 }
