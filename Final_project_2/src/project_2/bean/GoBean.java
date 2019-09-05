@@ -22,6 +22,12 @@ public class GoBean {
 	public String main() {
 		return "/finder/main";
 	}
+	
+	@RequestMapping("welcome.do")
+	public String welcome() {
+		
+		return "welcome";
+	}
 
 
 }

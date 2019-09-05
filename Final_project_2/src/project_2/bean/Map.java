@@ -30,7 +30,7 @@ public class Map {
 	public ModelAndView cluster() {
 		ModelAndView model = new ModelAndView();
 		
-		List<PlaceList> list = sql.selectList("placelistdb.selectplacelist");
+		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
 		model.addObject("list",list);
 		
 		model.setViewName("/finder/cluster");
