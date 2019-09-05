@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import project.list.vo.PlaceList;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/map/")
 public class Map {
 	
 	//my batis db
