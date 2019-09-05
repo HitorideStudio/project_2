@@ -27,11 +27,17 @@ public class GoBean {
 		return "/finder/map";
 	}
 	@RequestMapping("cluster.do")
-	public String cluster(ModelAndView model) {
+	public ModelAndView cluster() {
+		ModelAndView model = new ModelAndView();
 		
 		List<PlaceList> list = sql.selectList("placelistdb.selectplacelist");
 		model.addObject("list",list);
-		return "/finder/cluster";
+		
+		model.setViewName("/finder/cluster");
+		return model;
+		
 	}
+	a
+
 
 }
