@@ -6,5 +6,7 @@
 	<insert id="rindbinsert" parameterType="vo">
 	   insert into placelist values(#{placename}, #{address}, #{tel}, #{lon}, #{lat},#{place})
 	</insert>
-	
+	<select id="select" resultType="vo">
+		select * from placelist
+	</select>
 </mapper>

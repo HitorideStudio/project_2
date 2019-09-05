@@ -1,11 +1,14 @@
 package rindb.bean;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.rosuda.REngine.RList;
 import org.rosuda.REngine.Rserve.RConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import project.list.vo.PlaceList;
 
@@ -49,4 +52,21 @@ public class Rindb {
 		
 		return "/rindb/insert";
 	}
+	
+	/* 마커찍는곳에적용해야됨
+	 * @RequestMapping("maker.do") public ModelAndView maker() { ModelAndView model
+	 * = new ModelAndView();
+	 * 
+	 * 
+	 * List<PlaceList> list = sql.selectList("rindblist.select");
+	 * 
+	 * model.addObject("list",list);
+	 * 
+	 * model.setViewName("/day/maker"); return model;
+	 * 
+	 * }
+	 */
+	
+	
+	
 }
