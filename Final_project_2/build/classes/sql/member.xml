@@ -9,7 +9,7 @@
 	</insert>
 	
 	<select id="loginCheck" parameterType="member" resultType="int">
-		select count(*) from test where id=#{id} and pw=#{pw}
+		select count(*) from member2 where id=#{id} and pw=#{pw}
 	</select>
 	<select id="selectUser" parameterType="String" resultType="member">
 		select * from member2 where id=#{value}
@@ -24,5 +24,8 @@
 	<delete id="deletePro2" parameterType="String">
 		delete from member2 where id=#{id}
 	</delete>
+	<select id="confirmId" parameterType="String" resultType="int">
+		select count(*) from member2 where id = #{id}
+	</select>
 		
 	</mapper>

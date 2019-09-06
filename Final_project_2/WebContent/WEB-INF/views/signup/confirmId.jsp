@@ -5,8 +5,17 @@
 <html>
 <head><title>ID 중복확인</title>
 <link href="style.css" rel="stylesheet" type="text/css">
+<script language="javascript">
 
+  function setid()
+    {		
+    	opener.document.userinput.id.value="${id}";
+		self.close();
+		}
+		
+</script>
 <body >
+
 <c:if test="${check == 1 }">
 
 <table width="270" border="0" cellspacing="0" cellpadding="5">
@@ -40,12 +49,4 @@
 
 </body>
 </html>
-<script language="javascript">
 
-  function setid()
-    {		
-    	opener.document.userinput.id.value="${id}";
-		self.close();
-		}
-		
-</script>
