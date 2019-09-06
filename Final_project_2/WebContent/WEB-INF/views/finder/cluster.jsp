@@ -11,8 +11,8 @@
     
 </head>
 <body>
-<div id="map" style="width:80%;height:800px;"></div>
 
+<div id="map" style="width:80%;height:800px;"></div>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=6e0cc7f923dfb2d33aa1685a125ad6cb"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
@@ -60,7 +60,5 @@ var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerSt
 </script>
 </body>
 </html>
-
-
 
 

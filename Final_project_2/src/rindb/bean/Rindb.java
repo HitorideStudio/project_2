@@ -45,7 +45,7 @@ public class Rindb {
 			vo.setLon(s[3][i]);
 			vo.setLat(s[4][i]);
 			vo.setPlace(s[5][i]);
-			sql.insert("placelistdb.rindbinsert",vo);
+			sql.insert("rindb.rindbinsert",vo);
 			}
 	
 		rc.close();
