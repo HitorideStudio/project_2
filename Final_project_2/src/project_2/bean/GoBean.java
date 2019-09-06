@@ -22,7 +22,6 @@ public class GoBean {
 	public String main() {
 		return "/finder/main";
 	}
-<<<<<<< HEAD
 	
 	@RequestMapping("map.do")
 	public String map() {
@@ -30,11 +29,12 @@ public class GoBean {
 	}
 	@RequestMapping("cluster.do")
 	public ModelAndView cluster() {
-=======
+		ModelAndView model = new ModelAndView();
+		return model;
+	}
 	
 	@RequestMapping("welcome.do")
 	public ModelAndView welcome() {
->>>>>>> branch 'master' of https://github.com/HitorideStudio/project_2.git
 		ModelAndView model = new ModelAndView();
 		
 		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
@@ -43,15 +43,6 @@ public class GoBean {
 		model.setViewName("welcome");
 		
 		return model;
-<<<<<<< HEAD
 		
 	}
-
-
-=======
-	}
-	
-	
->>>>>>> branch 'master' of https://github.com/HitorideStudio/project_2.git
-
 }
