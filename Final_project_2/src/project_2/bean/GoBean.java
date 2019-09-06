@@ -29,6 +29,16 @@ public class GoBean {
 		return "/finder/main";
 	}
 	
+	@RequestMapping("map.do")
+	public String map() {
+		return "/finder/map";
+	}
+	@RequestMapping("cluster.do")
+	public ModelAndView cluster() {
+		ModelAndView model = new ModelAndView();
+		return model;
+	}
+	
 	@RequestMapping("welcome.do")
 	public ModelAndView welcome() {
 		ModelAndView model = new ModelAndView();
@@ -39,8 +49,6 @@ public class GoBean {
 		model.setViewName("welcome");
 		
 		return model;
+		
 	}
-	
-	
-
 }

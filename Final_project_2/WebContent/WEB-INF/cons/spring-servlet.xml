@@ -19,11 +19,17 @@
 	<!-- in db bean con -->
 	<bean id="rindb" class="rindb.bean.Rindb"/>
 
+<<<<<<< HEAD
 	
 
+=======
+>>>>>>> refs/remotes/origin/master
 	<!-- 이거 맞는지 잘모르겠다by건훈 -->
 	<bean id="memberVO" class="project.member.vo.memberVO"/>
+<<<<<<< HEAD
 
+=======
+>>>>>>> refs/remotes/origin/master
 	
 	<!--  -->
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
