@@ -22,7 +22,7 @@ public class GoBean {
 	public String main() {
 		return "/finder/main";
 	}
-<<<<<<< HEAD
+	
 	@RequestMapping("map.do")
 	public String map() {
 		return "/finder/map";
@@ -38,8 +38,7 @@ public class GoBean {
 		return model;
 		
 	}
-=======
->>>>>>> branch 'master' of https://github.com/HitorideStudio/project_2.git
+
 
 
 }
