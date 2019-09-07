@@ -42,4 +42,17 @@ public class Map {
 		return model;
 		
 	}
+	
+	@RequestMapping("welcome.do")
+	public ModelAndView welcome() {
+		ModelAndView model = new ModelAndView();
+		
+		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
+		
+		model.addObject("list",list);
+		model.setViewName("welcome");
+		
+		return model;
+		
+	}
 }
