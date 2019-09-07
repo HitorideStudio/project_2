@@ -1,11 +1,14 @@
 package rindb.bean;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.rosuda.REngine.RList;
 import org.rosuda.REngine.Rserve.RConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import project.list.vo.PlaceList;
 
@@ -42,11 +45,14 @@ public class Rindb {
 			vo.setLon(s[3][i]);
 			vo.setLat(s[4][i]);
 			vo.setPlace(s[5][i]);
-			sql.insert("rindblist.rindbinsert",vo);
+			sql.insert("rindb.rindbinsert",vo);
 			}
 	
 		rc.close();
 		
 		return "/rindb/insert";
 	}
+	
+
+	
 }
