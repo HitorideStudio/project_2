@@ -109,10 +109,7 @@ var overlay;
       kakao.maps.event.addListener(markers, 'click', function() {
   	    overlay.setMap(map);
   	});
-     var infoclose = document.getElementsByClassName("close");
-		for(var k =0; k < infoclose.length; k++){
-			function(index){
-				infoclose[index].addEventListener ("click",closeOverlay, false)}}
+   
 	}
 	test(list);
 	
