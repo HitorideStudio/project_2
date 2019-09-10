@@ -25,30 +25,14 @@ public class GoBean {
 	
 	@RequestMapping("main.do")
 	public String main() {
-		;
+		
 		return "/finder/main";
 	}
 	
-	@RequestMapping("map.do")
-	public String map() {
-		return "/finder/map";
+	@RequestMapping("info.do")
+	private String info() {
+		
+		return "/finder/info";
 	}
-	@RequestMapping("cluster.do")
-	public ModelAndView cluster() {
-		ModelAndView model = new ModelAndView();
-		return model;
-	}
-	
-	@RequestMapping("welcome.do")
-	public ModelAndView welcome() {
-		ModelAndView model = new ModelAndView();
-		
-		List<PlaceList> list = sql.selectList("mapsql.selectplacelist");
-		
-		model.addObject("list",list);
-		model.setViewName("welcome");
-		
-		return model;
-		
-	}
+
 }
